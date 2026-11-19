@@ -2,18 +2,24 @@
 <html lang="th">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
   <title>AI-in-Cloud Research Survey</title>
-  <meta http-equiv="refresh" content="0;url=https://script.google.com/macros/s/AKfycbz-bXoJQuPJZvdBS1oJIdyeUo4ZbPWg6FsgUu0xsrOmZ9mbwCu8NjFPAABgES_ykQNJ/exec">
 </head>
 <body>
-  <p>
-    Redirecting to the AI-in-Cloud Survey...
-  </p>
+  <p>กำลังเปิดแบบสอบถาม AI-in-Cloud...</p>
+  <p id="fallback"></p>
+
   <script>
-    window.location.replace(
-      "https://script.google.com/macros/s/AKfycbz-bXoJQuPJZvdBS1oJIdyeUo4ZbPWg6FsgUu0xsrOmZ9mbwCu8NjFPAABgES_ykQNJ/exec"
-    );
+    const surveyURL =
+      "https://script.google.com/macros/s/AKfycbz-bXoJQuPJZvdBS1oJIdyeUo4ZbPWg6FsgUu0xsrOmZ9mbwCu8NjFPAABgES_ykQNJ/exec";
+
+    const link = document.createElement("a");
+    link.href = surveyURL;
+    link.textContent = "คลิกที่นี่เพื่อเปิดแบบสอบถาม";
+    document.getElementById("fallback").appendChild(link);
+
+    window.location.replace(surveyURL);
   </script>
 </body>
 </html>
